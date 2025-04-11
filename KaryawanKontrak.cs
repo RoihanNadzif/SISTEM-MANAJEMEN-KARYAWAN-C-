@@ -10,11 +10,11 @@ namespace SISTEMMANAJEMENKARYAWAN
     {
         public KaryawanKontrak(string nama, string iD, double gajipokok) : base(nama, iD, gajipokok)
         { } //construktor publik dari karyawankontrak dengan 3 parameter : nama,iD,gajipokok kemudian menggunakan base,
-        private double PKontrak = 200000; // memanggil kontruktor dari superclassnya dengan 3 parameternya ke konstruktor tersebut
+        private double PKontrak = 200000; // memanggil kontruktor dari superclassnya dengan 3 parameternya ke konstruktor tersebut dibuatprivat agar hanya bisa diakses hanya class tersebut.
         //variable tipe data double PKontrak yang nilainya
         public override double HitungGaji() // metod yang meng overide metod hitunggaji dari kelas karyawan
         {
-            return gajipokok + PKontrak; //menjumlahkan gajipokok dengan pkonrak dan nanti di return
+            return gajipokok - PKontrak; //pengurangan gajipokok dengan pkonrak dan nanti di return
         }
     }
 }
